@@ -1,0 +1,82 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/salsack"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/text_view_status_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:text="Order Confirmed at DATE "
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:layout_below="@id/text_view_status_date"
+        android:layout_above="@id/text_view_order_sum"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/text_view_order_sum"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_street_confirm"
+        android:layout_marginTop="15dp"
+        android:text="summary"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/text_view_street_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_city_confirm"
+        android:layout_marginTop="10dp"
+        android:text="Street"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/text_view_city_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/text_view_zipcode_confirm"
+        android:text="City"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:layout_marginHorizontal="10dp"
+        android:id="@+id/text_view_zipcode_confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/image_button_home"
+        android:text="Zipcode"
+        android:textColor="@color/black"
+        android:layout_marginBottom="30dp"
+        android:textSize="20dp" />
+
+    <ImageButton
+        android:id="@+id/image_button_home"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@color/colorOrange"
+        android:src="@drawable/ic_baseline_home_24" />
+
+</RelativeLayout>
+

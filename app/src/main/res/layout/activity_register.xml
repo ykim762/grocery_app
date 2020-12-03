@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/gradient"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:text="Register"
+        android:textColor="@color/white"
+        android:textSize="32dp" />
+
+    <ImageView
+        android:layout_marginTop="5dp"
+        android:layout_gravity="center"
+        android:src="@drawable/ic_baseline_person_add_alt_1_24"
+        android:layout_width="100dp"
+        android:layout_height="100dp" />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:padding="15dp"
+        android:orientation="vertical">
+
+
+        <EditText
+            android:id="@+id/edit_text_name_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Name" />
+
+        <EditText
+            android:id="@+id/edit_text_email_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email" />
+
+        <EditText
+            android:id="@+id/edit_text_password_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Password" />
+
+        <EditText
+            android:id="@+id/edit_text_mobile_reg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Mobile" />
+
+        <Button
+            android:layout_marginTop="10dp"
+            android:id="@+id/button_submit_reg"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Confirm Register" />
+
+        <TextView
+            android:id="@+id/text_view_already"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:clickable="true"
+            android:text="Already registered? Click Here"
+            android:textSize="15dp" />
+
+    </LinearLayout>
+
+
+</LinearLayout>

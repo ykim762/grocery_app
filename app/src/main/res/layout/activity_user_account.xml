@@ -1,0 +1,145 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorOrange"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar" />
+
+    <ImageView
+        android:id="@+id/image_view_user"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_gravity="center"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginTop="60dp"
+        android:src="@drawable/ic_baseline_person_24" />
+
+    <TextView
+        android:id="@+id/text_view_user_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="70dp"
+        android:layout_toRightOf="@id/image_view_user"
+        android:text="User name"
+        android:textColor="@color/white"
+        android:textSize="28dp"
+        android:textStyle="italic" />
+
+    <TextView
+        android:id="@+id/text_view_user_email"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/text_view_user_name"
+        android:layout_toRightOf="@id/image_view_user"
+        android:text="User email"
+        android:textColor="@color/white"
+        android:textSize="24dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_orders_account"
+        android:layout_below="@id/text_view_user_email"
+        android:layout_marginTop="30dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp" />
+
+    <!--    <RelativeLayout-->
+    <!--        android:id="@+id/layout_none"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/image_view_user"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:padding="16dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:text="No recent order"-->
+    <!--            android:layout_centerInParent="true"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="24dp" />-->
+
+    <!--    </RelativeLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:id="@+id/layout_exist"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="match_parent"-->
+    <!--        android:layout_below="@id/image_view_user"-->
+    <!--        android:layout_marginTop="20dp"-->
+    <!--        android:padding="16dp"-->
+    <!--        android:orientation="vertical">-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:textStyle="bold"-->
+    <!--            android:text="Most Recent Order"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="24dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_id_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="order id"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_date_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="date"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_status_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="status"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+
+    <!--        <androidx.recyclerview.widget.RecyclerView-->
+    <!--            android:padding="16dp"-->
+    <!--            android:id="@+id/recycler_view_orders_account"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content" />-->
+
+    <!--        <TextView-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="Shipping Address"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="24dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_city_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="city"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_street_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="street"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+    <!--        <TextView-->
+    <!--            android:id="@+id/text_view_order_zipcode_user"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:text="zipcode"-->
+    <!--            android:textColor="@color/white"-->
+    <!--            android:textSize="20dp" />-->
+    <!--    </LinearLayout>-->
+
+
+</RelativeLayout>

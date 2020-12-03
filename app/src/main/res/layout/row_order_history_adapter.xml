@@ -1,0 +1,96 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/outline"
+    android:orientation="vertical"
+    android:layout_marginBottom="10dp"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/text_view_order_status"
+        android:textColor="@color/black"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="status"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/text_view_order_date"
+        android:layout_width="wrap_content"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:text="date"
+        android:textSize="18dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Products"
+        android:textSize="22dp" />
+
+    <RelativeLayout
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_view_product"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:text="product"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/text_view_product_quantity_order"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@id/text_view_product_price_order"
+            android:text="quantity"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="18dp" />
+        <TextView
+            android:id="@+id/text_view_product_price_order"
+            android:layout_width="wrap_content"
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="price"
+            android:textSize="18dp" />
+    </RelativeLayout>
+
+    <TextView
+        android:layout_marginTop="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="Shipping Address"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/text_view_order_city_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="city"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/text_view_order_street_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="street"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/text_view_order_zipcode_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/black"
+        android:text="zipcode"
+        android:textSize="18dp" />
+
+</LinearLayout>

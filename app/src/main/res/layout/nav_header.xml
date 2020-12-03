@@ -1,0 +1,35 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/colorOrange"
+    android:paddingTop="40dp"
+    android:paddingLeft="20dp"
+    android:paddingBottom="20dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hello"
+        android:textColor="@color/white"
+        android:textSize="16dp" />
+
+    <TextView
+        android:id="@+id/text_view_name_nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest"
+        android:textColor="@color/white"
+        android:textSize="24dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/text_view_email_nav_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Guest Email"
+        android:textColor="@color/white"
+        android:textSize="20dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/app_bar" />
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_marginTop="70dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:text="Type"
+            android:textSize="18dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <RadioButton
+            android:layout_marginHorizontal="20dp"
+            android:id="@+id/radio_button_home"
+            android:text="Home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/radio_button_office"
+            android:layout_marginHorizontal="20dp"
+            android:text="Office"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <RadioButton
+            android:id="@+id/radio_button_other"
+            android:layout_marginHorizontal="20dp"
+            android:text="Other"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/edit_text_street_address"
+        android:layout_below="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Street" />
+
+    <EditText
+        android:id="@+id/edit_text_housenum_address"
+        android:layout_below="@+id/edit_text_street_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="House num" />
+
+    <EditText
+        android:id="@+id/edit_text_city_address"
+        android:layout_below="@+id/edit_text_housenum_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="City" />
+
+    <EditText
+        android:id="@+id/edit_text_zipcode_address"
+        android:layout_below="@id/edit_text_city_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="10dp"
+        android:hint="Zipcode" />
+
+    <Button
+        android:id="@+id/button_submit_new_address"
+        android:layout_below="@id/edit_text_zipcode_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="10dp"
+        android:text="Submit" />
+
+</RelativeLayout>

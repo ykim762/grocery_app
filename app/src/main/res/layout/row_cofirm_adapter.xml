@@ -1,0 +1,46 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="5dp"
+    android:background="@drawable/outline">
+
+    <ImageView
+        android:id="@+id/image_view_confirm"
+        android:layout_width="120dp"
+        android:layout_height="100dp"
+        android:layout_marginHorizontal="15dp"/>
+
+    <TextView
+        android:id="@+id/text_view_name_confirm"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_toRightOf="@+id/image_view_confirm"
+        android:text="Product name"
+        android:textColor="@color/black"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/text_view_price_confirm"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_view_name_confirm"
+        android:layout_toRightOf="@+id/image_view_confirm"
+        android:text="price"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/text_view_quantity_confirm"
+        android:layout_width="40dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:gravity="center"
+        android:text="x1"
+        android:textColor="@color/black"
+        android:textSize="18dp" />
+
+</RelativeLayout>
