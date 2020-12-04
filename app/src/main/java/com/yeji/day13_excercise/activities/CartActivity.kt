@@ -6,7 +6,9 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
+import android.widget.TextView
 import android.widget.Toast
+import androidx.core.view.MenuItemCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.yeji.day13_excercise.R
 import com.yeji.day13_excercise.adapters.CartAdapter
@@ -15,6 +17,7 @@ import com.yeji.day13_excercise.helper.SessionManager
 import com.yeji.day13_excercise.models.Product
 import kotlinx.android.synthetic.main.activity_cart.*
 import kotlinx.android.synthetic.main.app_bar.*
+import kotlinx.android.synthetic.main.new_cart_layout.view.*
 import kotlinx.android.synthetic.main.row_cart_adapter.view.*
 
 class CartActivity : AppCompatActivity(), CartAdapter.OnAdapterListener {
@@ -22,6 +25,7 @@ class CartActivity : AppCompatActivity(), CartAdapter.OnAdapterListener {
     lateinit var dbHelper: DBHelper
     lateinit var cartadapter: CartAdapter
     var mList: ArrayList<Product> = ArrayList()
+    var textViewCartCount: TextView? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -92,6 +96,16 @@ class CartActivity : AppCompatActivity(), CartAdapter.OnAdapterListener {
     }
 
     private fun updateUI() {
+        // cart
+        var count = dbHelper.getCartTotalQty()
+        if (count == 0) {
+            textViewCartCount?.visibility = View.GONE
+
+        } else {
+            textViewCartCount?.visibility = View.VISIBLE
+            textViewCartCount?.text = count.toString()
+        }
+
         text_view_cart_sub_total_num.text = "$" + calcSubTotal().toString()
         text_view_cart_discount_num.text = "- $" + calcDiscount().toString()
         text_view_cart_total_num.text = "$" + (calcSubTotal() - calcDiscount()).toString()
@@ -121,18 +135,25 @@ class CartActivity : AppCompatActivity(), CartAdapter.OnAdapterListener {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
     }
 
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.main_menu, menu)
-        return true
+
+        // cart
+        var item = menu.findItem(R.id.menu_cart)
+        MenuItemCompat.setActionView(item, R.layout.new_cart_layout)
+        var view = MenuItemCompat.getActionView(item)
+        textViewCartCount = view.text_view_cart_count
+
+        updateUI()
+
+        return super.onCreateOptionsMenu(menu)
     }
+
 
     // 클릭되면 자동으로 불림
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
             android.R.id.home -> finish()
-            R.id.menu_cart -> {
-                Toast.makeText(this, "cart", Toast.LENGTH_SHORT).show()
-            }
             R.id.menu_logout -> {
                 Toast.makeText(this, "logout", Toast.LENGTH_SHORT).show()
                 var sessionManager = SessionManager(this)

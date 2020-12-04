@@ -19,14 +19,13 @@
         android:layout_toRightOf="@+id/image_view_cart"
         android:text="Product name"
         android:textColor="@color/black"
-        android:textSize="20dp" />
+        android:textSize="19dp" />
 
     <TextView
         android:id="@+id/text_view_mrp_cart"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_view_name_cart"
-        android:layout_marginTop="15dp"
+        android:layout_marginTop="55dp"
         android:layout_toRightOf="@+id/image_view_cart"
         android:text="price"
         android:textSize="16dp" />
@@ -45,7 +44,7 @@
         android:id="@+id/image_button_delete"
         android:src="@drawable/ic_baseline_delete_24"
         android:background="@color/beiji"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginRight="5dp"
         android:layout_alignParentRight="true"
         android:layout_width="50dp"

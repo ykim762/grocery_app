@@ -21,7 +21,6 @@ class CartAdapter(var mcontext: Context) : RecyclerView.Adapter<CartAdapter.View
 
     var mList: ArrayList<Product> = ArrayList()
     var listener: OnAdapterListener? = null
-    var dbHelper = DBHelper(mcontext)
 
     inner class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bind(product: Product, position: Int) {

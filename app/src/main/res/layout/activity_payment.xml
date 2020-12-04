@@ -14,7 +14,6 @@
         android:layout_marginHorizontal="10dp"
         android:layout_marginTop="70dp" />
 
-
     <RelativeLayout
         android:id="@+id/layout_total"
         android:layout_width="match_parent"

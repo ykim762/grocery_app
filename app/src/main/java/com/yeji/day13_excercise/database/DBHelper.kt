@@ -79,6 +79,17 @@ class DBHelper(context: Context) : SQLiteOpenHelper(context, KEY_DB_NAME, null, 
         db.update(TABLE_NAME, contentValues, whereClause, whereArgs)
     }
 
+    fun getCartTotalQty():Int {
+        var quantity:Int = 0
+
+        var plist = readProduct()
+        for(product in plist){
+            quantity += product.quantity
+        }
+
+        return quantity
+    }
+
     // delete from employee where id = 1
     fun deleteProduct(id: String) {
         var whereClause = "$COLUMN_ID = ?"
